@@ -31,5 +31,6 @@ fi
 if $inode_used -ge 20; then
 	kill $(pgrep start.sh)
 	echo "Plus d'inode disponible, arrêt de start.sh"
+	crontab -r
 fi
  
