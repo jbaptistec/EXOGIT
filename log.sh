@@ -1,6 +1,7 @@
 #!/bin/sh
 count=1  
-n=1000
+# définition du nombre de fichier à créer > paramètre à entrer
+n=$nb_voulu
 mkdir -p /var/log/exercice/recent_logs
 # mkdir -p TEST
 while [ $count -le $n ]
