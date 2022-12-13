@@ -27,7 +27,8 @@ if $inode_used -ge 20; then
 	wall "HODOOOR !!!"
 fi
 
-# if $inode_used -ge 20; then
-# STOP start.sh
- 
+# arrêt de start si malgrès l'archivage et compression la quantité d'inode utilisé est toujours trop importante
+if $inode_used -ge 20; then
+	kill $(pgrep start.sh)
+fi
  
