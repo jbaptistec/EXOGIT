@@ -5,7 +5,7 @@ inode_used=$(df -i ~/EXOGIT/ |grep -v Filesystem|awk '{print $5}'|sed 's/\%//')
 # echo $inode_used
 
 # création fichier archivage
-# vérification préalable 1: vérification de l'existance d'un dossier d'archivage
+# vérification préalable : vérification de l'existence d'un dossier d'archivage
 if [ ! -d "/var/log/exercice/archives"]; then
 	# création du directory
 	mkdir -p /var/log/exercice/archives/
