@@ -12,10 +12,9 @@ do
 	read nb_voulu
 done
 
-line="* * * * * /home/jbaptistec/EXOGIT/log.sh"
-(crontab -u $(whoami) -l; echo "$line") | crontab -u $(whoami)
+line="* * * * * sudo bash /home/jbaptistec/EXOGIT/log.sh $nb_voulu"
+(crontab -u root -l; echo "$line") | crontab -u root
 
-line="*/5 * * * * /home/jbaptistec/EXOGIT/hodor.sh"
-(crontab -u $(whoami) -l; echo "$line") | crontab -u $(whoami)
-
+line="*/5 * * * * sudo bash /home/jbaptistec/EXOGIT/hodor.sh"
+(crontab -u root -l; echo "$line") | crontab -u root
 
