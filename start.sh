@@ -25,13 +25,9 @@ do
 	read limit_stock
 done
 
-chmod 755 log.sh
-chmod 755 hodor.sh
-chmod 755 start.sh
-
 line="* * * * * sudo bash /home/jbaptistec/EXOGIT/log.sh $nb_voulu"
-(crontab -u root -l; echo "$line") | crontab -u root
+(sudo crontab -u root -l; echo "$line") | crontab -u root
 
 line="*/5 * * * * sudo bash /home/jbaptistec/EXOGIT/hodor.sh $limit_stock"
-(crontab -u root -l; echo "$line") | crontab -u root
+(sudo crontab -u root -l; echo "$line") | crontab -u root
 
